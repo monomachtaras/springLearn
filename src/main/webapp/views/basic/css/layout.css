@@ -1,12 +1,17 @@
 
-div.body{ 
-background: pink;
+body{ 
+background: grey;
 }
 
 #header{ 
 background: green;
+height:150px;
 }
-#body{background: pink;}
-#footer{ 
+#body2{background: pink; float:left;}
+
+#left{ 
 background: yellow;
+float:left;
+width:150px;
+height:300px;
 }

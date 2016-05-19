@@ -12,8 +12,9 @@
 </head>
 <body>
 <div id="header"><tiles:insertAttribute name="header"></tiles:insertAttribute></div>
-<div id="body"><tiles:insertAttribute name="body"></tiles:insertAttribute></div>
 <div id="left"><tiles:insertAttribute name="left"></tiles:insertAttribute></div>
+<div id="body2"><tiles:insertAttribute name="body2"></tiles:insertAttribute></div>
+
 
 
 </body>

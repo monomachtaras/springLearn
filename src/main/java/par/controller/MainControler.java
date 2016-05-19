@@ -19,9 +19,7 @@ public class MainControler {
 	
 	@RequestMapping("/")
 	public String welcome(Model model){ 		
-		//model.addAttribute("xxx", "main page");
-		model.addAttribute("modAtr", "hello");
-		
+		model.addAttribute("modAtr", "hello");		
 		return "base";}
 	
 	
