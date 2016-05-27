@@ -1,13 +1,12 @@
 package par.Dao.imp;
 
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
 import org.springframework.stereotype.Repository;
 import par.Dao.PlayerDao;
 import par.entity.Player;
+
 
 @Repository
 public class PlayerDaoImp implements PlayerDao {
@@ -24,7 +23,9 @@ public class PlayerDaoImp implements PlayerDao {
 	}
 
 	public List<Player> getAllPlayers() {
-		return manager.createQuery("from PLAYER", Player.class).getResultList();
+		return manager.createQuery("from Player", Player.class).getResultList();
+		
+
 	}
 
 }

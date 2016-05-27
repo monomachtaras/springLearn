@@ -22,7 +22,7 @@ public class PointDaoImp implements PointDao {
 	}
 
 	public List<Point> getAllPoints() {
-		return manager.createQuery("from POINT", Point.class).getResultList();
+		return manager.createQuery("from Point", Point.class).getResultList();
 	}
 
 

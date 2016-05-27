@@ -13,10 +13,10 @@ import par.service.PlayerService;
 public class PlayerServiceImp  implements PlayerService{
     
 	@Autowired
-	PlayerDao playerDao;
+	private PlayerDao playerDao;
 	
 	@Transactional
-	public void addPlayer(String name, String surname, int yearOfBirth) {
+	public void addPlayer(String name, String surname, String yearOfBirth) {
 		playerDao.addPlayer(new Player(name, surname, yearOfBirth));		
 	}
 

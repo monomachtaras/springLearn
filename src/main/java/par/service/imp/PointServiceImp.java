@@ -5,6 +5,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import par.Dao.PointDao;
+import par.entity.Game;
 import par.entity.Point;
 import par.service.PointService;
 
@@ -15,8 +16,8 @@ public class PointServiceImp implements PointService {
 	PointDao pointDao;
 
 	@Transactional
-	public void addPoint(double p1, double p2) {
-		pointDao.addPoint(new Point(p1, p2));		
+	public void addPoint(String point, String seet, Game game) {
+		pointDao.addPoint(new Point(point, seet, game));		
 	}
 
 	public Point getPointById(int id) {

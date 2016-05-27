@@ -5,26 +5,34 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+
 
 @Entity
-@Table(name="POINT")
 public class Point {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int id;	
+	private String point;
+	private String seet;
 	
-	private double p1;
-	private double p2;
 	
 	@ManyToOne
-	private Match match;
+	private Game game;
 
 	
 	
-	
-	
+	public Point(String point, String seet, Game game) {
+		super();
+		this.point = point;
+		this.seet = seet;
+		this.game = game;
+	}
+
+	public Point() {
+		super();
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -33,40 +41,41 @@ public class Point {
 		this.id = id;
 	}
 
-	public double getP1() {
-		return p1;
+	public Game getGame() {
+		return game;
 	}
 
-	public void setP1(double p1) {
-		this.p1 = p1;
+	public void setGame(Game game) {
+		this.game = game;
 	}
 
-	public double getP2() {
-		return p2;
+	public String getPoint() {
+		return point;
 	}
 
-	public void setP2(double p2) {
-		this.p2 = p2;
+	public void setPoint(String point) {
+		this.point = point;
 	}
 
-	public Match getMatch() {
-		return match;
+	public String getSeet() {
+		return seet;
 	}
 
-	public void setMatch(Match match) {
-		this.match = match;
+	public void setSeet(String seet) {
+		this.seet = seet;
 	}
 
-	public Point(double p1, double p2) {
-		super();
-		this.p1 = p1;
-		this.p2 = p2;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "Point [id=" + id + ", p1=" + p1 + ", p2=" + p2 + "]";
+		return "Point [id=" + id + ", point=" + point + ", seet=" + seet + "]";
 	}
+
+	
+
+	
+
 	
 	
 

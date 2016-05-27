@@ -10,8 +10,22 @@
 		<put-attribute name="header" value="/views/basic/header.jsp"></put-attribute>
 		<put-attribute name="body2" value="/views/basic/body2.jsp"></put-attribute>
 		<put-attribute name="left" value="/views/basic/left.jsp"></put-attribute>
-			</definition>
-			
-
+	</definition>
+	<definition name="addPl" template="/views/basic/layout.jsp">
+		<put-attribute name="header" value="/views/basic/header.jsp"></put-attribute>
+		<put-attribute name="body2" value="/views/basic/addplayer.jsp"></put-attribute>
+		<put-attribute name="left" value="/views/basic/left.jsp"></put-attribute>
+	</definition>	
+    <definition name="allgames" extends="base">
+		<put-attribute name="body2" value="/views/basic/allgames.jsp"></put-attribute>
+	</definition>	
+	<definition name="loginPage" extends="base">
+		<put-attribute name="body2" value="/views/basic/loginPage.jsp"></put-attribute>
+	</definition>
+	<definition name="addPoints" extends="base">
+		<put-attribute name="body2" value="/views/basic/addpoints.jsp"></put-attribute>
+	</definition>
+	
+	
 	
 </tiles-definitions>

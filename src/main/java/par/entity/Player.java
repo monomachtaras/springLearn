@@ -1,17 +1,13 @@
 package par.entity;
 
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+
 
 @Entity
-@Table(name="PLAYER")
 public class Player {	
 	
 	@Id
@@ -19,10 +15,9 @@ public class Player {
 	private int id;
 	private String name;
 	private String surname;
-	private int yearOfBirth;
+	private String yearOfBirth;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
-	private List<Match> match;
+	
 
 	public int getId() {
 		return id;
@@ -48,32 +43,30 @@ public class Player {
 		this.surname = surname;
 	}
 
-	public int getYearOfBirth() {
+	public String getYearOfBirth() {
 		return yearOfBirth;
 	}
 
-	public void setYearOfBirth(int yearOfBirth) {
+	public void setYearOfBirth(String yearOfBirth) {
 		this.yearOfBirth = yearOfBirth;
 	}
 
-	public List<Match> getMatch() {
-		return match;
-	}
-
-	public void setMatch(List<Match> match) {
-		this.match = match;
-	}
+	
 
 	@Override
 	public String toString() {
 		return "Player [id=" + id + ", name=" + name + ", surname=" + surname + ", yearOfBirth=" + yearOfBirth + "]";
 	}
 
-	public Player(String name, String surname, int yearOfBirth) {
+	public Player(String name, String surname, String yearOfBirth) {
 		super();
 		this.name = name;
 		this.surname = surname;
 		this.yearOfBirth = yearOfBirth;
+	}
+
+	public Player() {
+		super();
 	}
 	
 	

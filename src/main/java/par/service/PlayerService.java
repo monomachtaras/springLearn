@@ -5,7 +5,7 @@ import java.util.List;
 import par.entity.Player;
 
 public interface PlayerService {
-	void addPlayer(String name, String surname, int yearOfBirth);
+	void addPlayer(String name, String surname, String yearOfBirth);
 	Player getPlayerById(int id);
 	List<Player> getAllPlayers();
 }
