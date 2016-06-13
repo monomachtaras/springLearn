@@ -16,55 +16,54 @@ public class Player {
 	private String name;
 	private String surname;
 	private String yearOfBirth;
+	private String statisticOfPlayer;
 	
 	
 
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getSurname() {
 		return surname;
 	}
-
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-
 	public String getYearOfBirth() {
 		return yearOfBirth;
 	}
-
 	public void setYearOfBirth(String yearOfBirth) {
 		this.yearOfBirth = yearOfBirth;
+	}
+    public String getStatisticOfPlayer() {
+		return statisticOfPlayer;
+	}
+	public void setStatisticOfPlayer(String statisticOfPlayer) {
+		this.statisticOfPlayer = statisticOfPlayer;
+	}
+	@Override
+	public String toString() {
+		return surname+" "+name+" "+yearOfBirth+" "+statisticOfPlayer;
 	}
 
 	
 
-	@Override
-	public String toString() {
-		return "Player [id=" + id + ", name=" + name + ", surname=" + surname + ", yearOfBirth=" + yearOfBirth + "]";
-	}
-
-	public Player(String name, String surname, String yearOfBirth) {
+	public Player(String name, String surname, String yearOfBirth, String statisticOfPlayer) {
 		super();
 		this.name = name;
 		this.surname = surname;
 		this.yearOfBirth = yearOfBirth;
+		this.statisticOfPlayer = statisticOfPlayer;
 	}
-
 	public Player() {
 		super();
 	}

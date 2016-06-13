@@ -1,13 +1,12 @@
 package par.Dao;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import par.entity.Player;
 
-public interface PlayerDao {
+
+public interface PlayerDao extends JpaRepository<Player, Integer> {
 	
-	void addPlayer(Player player);
-	Player getPlayerById(int id);
-	List<Player> getAllPlayers();
+	
 
 }

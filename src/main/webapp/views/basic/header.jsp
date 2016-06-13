@@ -8,11 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>header</h1>
-<select name="bindCustomer"> 
-<c:forEach items="${players}" var="singlePlayer">
-<option value="${singlePlayer.id}">${singlePlayer.name}</option>
-</c:forEach>
- </select>
+<h1>stat</h1>
+<table>
+<tr><td>total games</td></tr>
+<tr><td align="center">${totalGames}</td></tr>
+</table>
+ 
+ 
 </body>
 </html>

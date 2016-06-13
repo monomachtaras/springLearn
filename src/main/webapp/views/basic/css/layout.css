@@ -1,17 +1,33 @@
 
 body{ 
-background: grey;
+background: orange;
+width:99%;
+height:99%;
 }
 
 #header{ 
 background: green;
-height:150px;
+height:20%;
 }
-#body2{background: pink; float:left;}
+#body2{
+background: pink;
+float:left;
+width:85%;
+height:530px;
+}
 
 #left{ 
 background: yellow;
 float:left;
-width:150px;
-height:300px;
+width:15%;
+height:530px;
+}
+
+#line{ 
+width:220px; 
+height:100%; 
+background:#729fcf; 
+float:left; 
+margin-left:10px; 
+text-align:center;
 }

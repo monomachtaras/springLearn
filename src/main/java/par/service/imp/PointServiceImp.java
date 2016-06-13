@@ -16,16 +16,21 @@ public class PointServiceImp implements PointService {
 	PointDao pointDao;
 
 	@Transactional
-	public void addPoint(String point, String seet, Game game) {
-		pointDao.addPoint(new Point(point, seet, game));		
+	public void addPoint(Point point) {
+		pointDao.save(point);		
 	}
 
+	@Transactional
+	public void update(Point point) {
+		pointDao.save(point);
+	}
+	
 	public Point getPointById(int id) {
-		return pointDao.getPointById(id);
+		return pointDao.findOne(id);
 	}
 
 	public List<Point> getAllPoints() {
-		return pointDao.getAllPoints();
+		return pointDao.findAll();
 	}
 
 }

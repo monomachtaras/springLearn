@@ -16,16 +16,21 @@ public class PlayerServiceImp  implements PlayerService{
 	private PlayerDao playerDao;
 	
 	@Transactional
-	public void addPlayer(String name, String surname, String yearOfBirth) {
-		playerDao.addPlayer(new Player(name, surname, yearOfBirth));		
+	public void addPlayer(String name, String surname, String yearOfBirth, String statisticOfPlayer) {
+		playerDao.save(new Player(name, surname, yearOfBirth, statisticOfPlayer));		
 	}
 
 	public Player getPlayerById(int id) {
-		return playerDao.getPlayerById(id);
+		return playerDao.findOne(id);
 	}
 
 	public List<Player> getAllPlayers() {
-		return playerDao.getAllPlayers();
+		return playerDao.findAll();
 	}
+    @Transactional
+	public void update(Player player) {
+		playerDao.save(player);		
+	}
+
 
 }

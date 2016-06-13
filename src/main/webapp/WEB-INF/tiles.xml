@@ -18,6 +18,9 @@
 	</definition>	
     <definition name="allgames" extends="base">
 		<put-attribute name="body2" value="/views/basic/allgames.jsp"></put-attribute>
+	</definition>
+	 <definition name="allPlayers" extends="base">
+		<put-attribute name="body2" value="/views/basic/allPlayers.jsp"></put-attribute>
 	</definition>	
 	<definition name="loginPage" extends="base">
 		<put-attribute name="body2" value="/views/basic/loginPage.jsp"></put-attribute>
@@ -25,7 +28,8 @@
 	<definition name="addPoints" extends="base">
 		<put-attribute name="body2" value="/views/basic/addpoints.jsp"></put-attribute>
 	</definition>
-	
-	
+	<definition name="showStat" extends="base">
+		<put-attribute name="body2" value="/views/basic/showStat.jsp"></put-attribute>
+	</definition>
 	
 </tiles-definitions>

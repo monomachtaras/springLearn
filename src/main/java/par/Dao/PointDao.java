@@ -1,12 +1,11 @@
 package par.Dao;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 
 import par.entity.Point;
 
-public interface PointDao {
+public interface PointDao   extends JpaRepository<Point, Integer>{
 	
-	void addPoint(Point point);
-	Point getPointById(int id);
-	List<Point> getAllPoints();
+	
 }

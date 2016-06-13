@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<h1>body </h1>
+<h1>add game menu</h1>
 <form action="addGame" method="post">
 p1set<input type="text" name="p1sets"><br>
 p2set<input type="text" name="p2sets"><br>
@@ -27,12 +27,12 @@ p2set<input type="text" name="p2sets"><br>
  
 <select name="bindPlayer1"> 
  <c:forEach items="${players}" var="singlePlayer">
-<option value="${singlePlayer.id}">${singlePlayer.name}</option>   
+<option value="${singlePlayer.id}">${singlePlayer.surname}</option>   
 </c:forEach></select>
 
 <select name="bindPlayer2"> 
  <c:forEach items="${players}" var="singlePlayer2">
-<option value="${singlePlayer2.id}">${singlePlayer2.name}</option>   
+<option value="${singlePlayer2.id}">${singlePlayer2.surname}</option>   
 </c:forEach></select>
 
 <input type="submit">

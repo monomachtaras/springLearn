@@ -4,17 +4,16 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence 
 		http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
-	<persistence-unit name="pariUnit" transaction-type="RESOURCE_LOCAL">
-		
-
+	<persistence-unit name="Unit" transaction-type="RESOURCE_LOCAL">
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/pariBase" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/Base" />
 			<property name="hibernate.connection.username" value="root" />
 			<property name="hibernate.connection.password" value="110889" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.show_sql" value="true" />
 		</properties>
 	</persistence-unit>
+	
 </persistence>
